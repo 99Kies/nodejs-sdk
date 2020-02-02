@@ -111,7 +111,7 @@ Node.js SDK自带一个CLI工具供用户在命令行中方便快捷地调用管
 
 ```bash
 # 获取建链脚本
-curl -LO https://github.com/FISCO-BCOS/FISCO-BCOS/releases/download/`curl -s https://api.github.com/repos/FISCO-BCOS/FISCO-BCOS/releases | grep "\"v2\.[0-9]\.[0-9]\"" | sort -u | tail -n 1 | cut -d \" -f 4`/build_chain.sh && chmod u+x build_chain.sh
+eval '''curl -LO https://github.com/FISCO-BCOS/FISCO-BCOS/releases/download/`curl -s https://api.github.com/repos/FISCO-BCOS/FISCO-BCOS/releases | grep "\"v2\.[0-9]\.[0-9]\"" | sort -u | tail -n 1 | cut -d \" -f 4`/build_chain.sh && chmod u+x build_chain.sh '''
 # 在本地建一个4节点的FISCO BCOS链（如果需要搭建国密FISCO BCOS链，需要在命令中加入`-g`选项）
 bash build_chain.sh -l "127.0.0.1:4" -p 30300,20200,8545 -i
 # 启动FISCO BCOS链
